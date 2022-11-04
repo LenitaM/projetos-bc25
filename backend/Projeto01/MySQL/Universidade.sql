@@ -56,9 +56,9 @@ FOREIGN KEY(idCoordenacao) REFERENCES curso(idCoodernacao)
 
 INSERT INTO estudante VALUES (NULL, "Pedro Henrique", "ADS", "pedrohenri@gmail.com", 555555555, "222.222.222-11", "rua Soledad", 123, "Recife", "PE");
 INSERT INTO estutande VALUES (NULL, "Lucas Santos", "ADS", "lucassantos@gmail.com", 111222334, "777.444.353-13", "rua da Aurora", 453, "Recife", "PE");
-INSERT INTO estutande VALUES (NULL, "Carol Duarte", "Engenheria de Software", "lucassantos@gmail.com", 87658490265, "222.444.353-11", "rua 13 de Maio", 657, "Recife", "PE");
-INSERT INTO estutande VALUES (NULL, "Miguel Duarte", "Engenheria de Software", "lucassantos@gmail.com", 87659097584, "908.342.332-21", "rua Agamenon Magalhães", 698, "Recife", "PE");
-INSERT INTO estutande VALUES (NULL, "Maria Feitosa", "Ciência da Computação", "lucassantos@gmail.com", 09875897681, "756.342.2334-23", "rua Manoel Borba", 1213, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Carol Duarte", "Engenheria de Software", "caralduda@gmail.com", 87658490265, "222.444.353-11", "rua 13 de Maio", 657, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Miguel Duarte", "Engenheria de Software", "miguelduarte@gmail.com", 87659097584, "908.342.332-21", "rua Agamenon Magalhães", 698, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Maria Feitosa", "Ciência da Computação", "feitosamaria@gmail.com", 09875897681, "756.342.2334-23", "rua Manoel Borba", 1213, "Recife", "PE");
 SELECT * FROM estudante;
 
 DELETE FROM dependente 
@@ -79,8 +79,11 @@ idDepartamento INTEGER NOT NULL,
 FOREIGN KEY(idDepartamento) REFERENCES departamento(idDepartamento)
 );
 
-INSERT INTO professor VALUES (NULL, "Regina Kiss", "reginakiss@gmail.com", 333546785, "Algoritmo e Programção", "Av. Prof. Moraes Rego",1235,"Recife","PE");
-INSERT INTO professor VALUES (NULL, "Valéria Cavalcante", "valeriacavalcante@gmail.com", 989765430, "Análise de Sistemas","Av. Prof. Moraes Rego",1235,"Recife","PE");
+INSERT INTO professor VALUES (NULL, "Regina Kiss", "reginakiss@gmail.com", 333546780915, "Algoritmo e Programção", "Av. Prof. Moraes Rego",1235,"Recife","PE");
+INSERT INTO professor VALUES (NULL, "Valéria Cavalcante", "valeriacavalcante@gmail.com", 989765651430, "Análise de Sistemas","Av. Prof. Moraes Rego",1235,"Recife","PE");
+INSERT INTO professor VALUES (NULL, "Augusto Marques", "augustoengufpe@gmail.com", 89765439087, "Álgebra Linear","Av. Prof. Moraes Rego",1235,"Recife","PE");
+INSERT INTO professor VALUES (NULL, "Cláudio Fellipe", "claudioufpecp@gmail.com", 23659874150, "Infraestrutura de TI","Av. Prof. Moraes Rego",1235,"Recife","PE");
+
 SELECT * FROM professor;
 
 CREATE TABLE rel_prof_estud (
