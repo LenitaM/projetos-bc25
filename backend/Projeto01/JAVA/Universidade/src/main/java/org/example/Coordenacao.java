@@ -2,7 +2,7 @@ package org.example;
 
 public class Coordenacao {
     private int idCoordenacao;
-    private String nome;
+    private String curso;
     private String coordernador;
     private String email;
     private int tel;
@@ -12,9 +12,9 @@ public class Coordenacao {
     private String estado;
 
 
-    Coordenacao (int idCoordenacao, String nome, String coordernador, String email, int tel) {
+    Coordenacao (int idCoordenacao, String curso, String coordernador, String email, int tel) {
         this.idCoordenacao = idCoordenacao;
-        this.nome = nome;
+        this.curso = curso;
         this.coordernador = coordernador;
         this.email = email;
         this.tel = tel;
@@ -24,11 +24,18 @@ public class Coordenacao {
         this.estado = estado;
     }
 
-    public String getNome(){
-        return this.nome;
+    public String getCurso(){
+
+        return this.curso;
     }
 
     public String getCoordernador() {
+
         return  this.coordernador;
+    }
+
+    public String get() {
+
+        return this.coordernador + " é responsável pelo " + this.curso;
     }
 }

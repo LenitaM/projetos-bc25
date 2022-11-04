@@ -21,7 +21,7 @@ SELECT * FROM departamento;
 
 CREATE TABLE coordenacao (
 idCoordenacao INTEGER PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR (80) NOT NULL,
+nome VARCHAR (30) NOT NULL,
 coordenador VARCHAR (30) NOT NULL,
 email VARCHAR (30) NOT NULL,
 tel INTEGER NOT NULL,
@@ -41,8 +41,8 @@ SELECT * FROM curso;
 
 CREATE TABLE estudante (
 idEstudante INTEGER PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR (30) NOT NULL,
-curso VARCHAR (80) NOT NULL,
+coordernador VARCHAR (30) NOT NULL,
+curso VARCHAR (30) NOT NULL,
 email VARCHAR (30) NOT NULL,
 tel INTEGER NOT NULL,
 cpf VARCHAR (30) NOT NULL,
@@ -100,6 +100,24 @@ SELECT nome, disciplina FROM professor;
 SELECT coordenador, email FROM curso; 
 SELECT * FROM departamento WHERE email = "@gmail.com";
 SELECT idEstudante, nome, curso FROM estudante WHERE idEstudante = 1;
+
+SELECT nome, curso
+FROM estudante 
+    INNER JOIN professor 
+    ON estudante.idEstudante = professor.idEstudante;
+    
+    SELECT nome, disciplina
+    FROM professor
+    INNER JOIN coordenacao
+    ON professor.idProfessor = professor.idProfessor;
+    
+    SELECT nome, coordenador
+    FROM coordenador
+    INNER JOIN departamento
+    ON coordencao.idCoordenacao = coordenacao.idCoordenacao;
+    
+    ALTER TABLE departamento
+    ADD COLUMN viceDiretor VARCHAR(30) NOT NULL DEFAULT(1);
 
  
 

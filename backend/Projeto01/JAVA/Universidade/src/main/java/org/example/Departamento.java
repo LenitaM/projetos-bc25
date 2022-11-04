@@ -31,4 +31,13 @@ public class Departamento {
         return this.numero;
     }
 
+    public String getCentro() {
+        return this.centro;
+    }
+
+    public String getNomeCentro() {
+
+        return this.diretor + " é diretora do Centro Universitário de " + this.centro;
+    }
+
 }

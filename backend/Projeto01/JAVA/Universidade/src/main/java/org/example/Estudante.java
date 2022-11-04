@@ -52,4 +52,12 @@ public class Estudante {
         }
     }
 
+    public String getEndereco() {
+        return this.endereco;
+    }
+
+    public void setEndereco(String novoEndereco) {
+        this.endereco = novoEndereco;
+    }
+
 }

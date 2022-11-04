@@ -25,6 +25,22 @@ public class Professor {
     }
 
     public int getTel() {
+
         return this.tel;
     }
+
+    public String getNome() {
+        return  this.nome;
+    }
+
+    public void setDisciplina(String addDisciplina) {
+        if (addDisciplina == "Algoritmos e Programa II"){
+            this.disciplina = addDisciplina;
+        System.out.println("Foi adicionano ao professor " + getNome() + " a disciplina " + addDisciplina + ".");
+        }else {
+            System.out.println("O " + getNome() + ", não corresponde a essa matéria.");
+        }
+    }
+
+
 }
