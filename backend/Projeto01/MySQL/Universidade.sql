@@ -109,12 +109,12 @@ FROM estudante
     SELECT nome, disciplina
     FROM professor
     INNER JOIN coordenacao
-    ON professor.idProfessor = professor.idProfessor;
+    ON professor.idProfessor = coordenacao.idProfessor;
     
     SELECT nome, coordenador
     FROM coordenacao
     INNER JOIN departamento
-    ON coordencao.idCoordenacao = coordenacao.idCoordenacao;
+    ON coordencao.idCoordenacao = departamento.idCoordenacao;
     
     ALTER TABLE departamento
     ADD COLUMN viceDiretor VARCHAR(30) NOT NULL DEFAULT(1);
