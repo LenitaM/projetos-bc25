@@ -12,7 +12,7 @@ public class Estudante {
     private String cidade;
     private String estado;
 
-    Estudante (int idEstudante, String nome, String curso, String cpf, String email, String endereco, int numero,  String cidade, String estado) {
+    public Estudante (int idEstudante, String nome, String curso, String cpf, String email, String endereco, int numero,  String cidade, String estado) {
         this.idEstudante= idEstudante;
         this.nome = nome;
         this.curso = curso;
@@ -53,10 +53,12 @@ public class Estudante {
     }
 
     public String getEndereco() {
+
         return this.endereco;
     }
 
     public void setEndereco(String novoEndereco) {
+
         this.endereco = novoEndereco;
     }
 

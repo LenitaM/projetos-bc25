@@ -11,7 +11,7 @@ public class Departamento {
     private String cidade;
     private String estado;
 
-    Departamento (int idDepartamento, String diretor, String centro, String email, int tel, String endereco, int numero,  String cidade, String estado) {
+    public Departamento (int idDepartamento, String diretor, String centro, String email, int tel, String endereco, int numero,  String cidade, String estado) {
         this.idDepartamento = idDepartamento;
         this.diretor = diretor;
         this.centro = centro;

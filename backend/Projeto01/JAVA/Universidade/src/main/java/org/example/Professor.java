@@ -11,7 +11,7 @@ public class Professor {
     private String cidade;
     private String estado;
 
-    Professor (int idProfessor, String nome, String email, int tel, String disciplina, String endereco, int numero, String cidade, String estado) {
+    public Professor (int idProfessor, String nome, String email, int tel, String disciplina, String endereco, int numero, String cidade, String estado) {
         this.idProfessor = idProfessor;
         this.nome = nome;
         this.email = email;

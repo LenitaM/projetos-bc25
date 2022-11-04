@@ -12,7 +12,7 @@ public class Coordenacao {
     private String estado;
 
 
-    Coordenacao (int idCoordenacao, String curso, String coordernador, String email, int tel) {
+     public Coordenacao (int idCoordenacao, String curso, String coordernador, String email, int tel) {
         this.idCoordenacao = idCoordenacao;
         this.curso = curso;
         this.coordernador = coordernador;
