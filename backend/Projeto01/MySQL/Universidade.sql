@@ -112,7 +112,7 @@ FROM estudante
     ON professor.idProfessor = professor.idProfessor;
     
     SELECT nome, coordenador
-    FROM coordenador
+    FROM coordenacao
     INNER JOIN departamento
     ON coordencao.idCoordenacao = coordenacao.idCoordenacao;
     
