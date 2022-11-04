@@ -98,8 +98,15 @@ SELECT * FROM rel_prof_estud;
 
 SELECT nome, disciplina FROM professor;
 SELECT coordenador, email FROM curso; 
+
 SELECT * FROM departamento WHERE email = "@gmail.com";
+SELECT * FROM estudante WHERE curso = "ADS";
+SELECT * FROM estudante WHERE nome = "Duarte";
+SELECT idEstudante FROM curso WHERE curso = "Ciência da Computação";
 SELECT idEstudante, nome, curso FROM estudante WHERE idEstudante = 1;
+
+SELECT * FROM estudante ORDER BY curso;
+SELECT * FROM professor ORDER BY disciplina;
 
 SELECT nome, curso
 FROM estudante 
