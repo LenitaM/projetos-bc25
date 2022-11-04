@@ -16,7 +16,7 @@ cidade VARCHAR(30) NOT NULL,
 estado VARCHAR(30) NOT NULL
 );
 
-INSERT INTO departamento VALUES (NULL, "Renata Vasconcelos", "CIN","renatavasconcelos@gmail.com",999776655, "Av. Prof. Moraes Rego",1235,"Recife","PE");
+INSERT INTO departamento VALUES (NULL, "Renata Vasconcelos", "CIN","renatavasconcelos@gmail.com",999787676655, "Av. Prof. Moraes Rego",1235,"Recife","PE");
 SELECT * FROM departamento;
 
 CREATE TABLE coordenacao (
@@ -25,11 +25,18 @@ nome VARCHAR (80) NOT NULL,
 coordenador VARCHAR (30) NOT NULL,
 email VARCHAR (30) NOT NULL,
 tel INTEGER NOT NULL,
+endereco VARCHAR(30) NOT NULL,
+numero INTEGER NOT NULL,
+cidade VARCHAR(30) NOT NULL,
+estado VARCHAR(30) NOT NULL,
 idDepartamento INTEGER NOT NULL,
 FOREIGN KEY(idDepartamento) REFERENCES departamento(idDepartamento)
 );
 
-INSERT INTO curso VALUES (NULL, "ADS", "Carlos Magalhães", "adsufpe@gmail.com", 555487654);
+INSERT INTO coordenacao VALUES (NULL, "ADS", "Carlos Magalhães", "adsufpe@gmail.com", 555487689754, "Av. Prof. Moraes Rego",1235,"Recife","PE");
+INSERT INTO coordenacao VALUES (NULL, "Ciência da Computação", "Augusto Sobral", "cpufpe@gmail.com", 987654019877, "Av. Prof. Moraes Rego",1235,"Recife","PE" );
+INSERT INTO coordenacao VALUES (NULL, "Engenharia de Software", "Priscilla Lima", "engsoftwareufpe@gmail.com",98702648176, "Av. Prof. Moraes Rego",1235,"Recife","PE" );
+
 SELECT * FROM curso;
 
 CREATE TABLE estudante (
@@ -47,8 +54,11 @@ idCoodernacao INTEGER NOT NULL,
 FOREIGN KEY(idCoordenacao) REFERENCES curso(idCoodernacao)
 );
 
-INSERT INTO estudante VALUES (NULL, "Pedro Henrique", "ADS", "pedrohenri@gmail.com", 555555555, "222.222.222-11", "rua Soledad","Recife", "PE");
-INSERT INTO estutande VALUES (NULL, "Lucas Santos", "ADS", "lucassantos@gmail.com", 111222334, "777.444.353-13", "rua da Aurora", "Recife", "PE");
+INSERT INTO estudante VALUES (NULL, "Pedro Henrique", "ADS", "pedrohenri@gmail.com", 555555555, "222.222.222-11", "rua Soledad", 123, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Lucas Santos", "ADS", "lucassantos@gmail.com", 111222334, "777.444.353-13", "rua da Aurora", 453, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Carol Duarte", "Engenheria de Software", "lucassantos@gmail.com", 87658490265, "222.444.353-11", "rua 13 de Maio", 657, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Miguel Duarte", "Engenheria de Software", "lucassantos@gmail.com", 87659097584, "908.342.332-21", "rua Agamenon Magalhães", 698, "Recife", "PE");
+INSERT INTO estutande VALUES (NULL, "Maria Feitosa", "Ciência da Computação", "lucassantos@gmail.com", 09875897681, "756.342.2334-23", "rua Manoel Borba", 1213, "Recife", "PE");
 SELECT * FROM estudante;
 
 DELETE FROM dependente 
