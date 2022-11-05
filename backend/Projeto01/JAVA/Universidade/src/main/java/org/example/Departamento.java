@@ -37,7 +37,19 @@ public class Departamento {
 
     public String getNomeCentro() {
 
-        return this.diretor + " é diretora do Centro Universitário de " + this.centro;
+        return this.diretor + " é diretora do Centro Universitário " + this.centro;
     }
 
+    //Teste
+    public static void main (String[] args){
+
+        Departamento diretor = new Departamento (1,"Renata Vasconcelos", "CIN","renatavasconcelos@gmail.com",978776655, "Av. Prof. Moraes Rego",1235,"Recife","PE");
+
+        System.out.println(diretor.getDiretor());
+
+        System.out.println(diretor.getNomeCentro());
+
+    }
 }
+
+

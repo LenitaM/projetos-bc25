@@ -12,7 +12,7 @@ public class Estudante {
     private String cidade;
     private String estado;
 
-    public Estudante (int idEstudante, String nome, String curso, String cpf, String email, String endereco, int numero,  String cidade, String estado) {
+    public Estudante (int idEstudante, String nome, String curso, String cpf, int tel, String email, String endereco, int numero,  String cidade, String estado) {
         this.idEstudante= idEstudante;
         this.nome = nome;
         this.curso = curso;
@@ -44,9 +44,9 @@ public class Estudante {
 
 
     public void setTel(int novoTel) {
-        if (novoTel < 11) {
+        if (novoTel > 9) {
             this.numero = novoTel;
-            System.out.println("Novo número do estudante " + getNome() + " é " + novoTel+ ".");
+            System.out.println("Novo número do estudante " + getNome() + " é " + novoTel + ".");
         } else {
             System.out.println("Número inválido. Seu número não foi modificado.");
         }
@@ -57,9 +57,28 @@ public class Estudante {
         return this.endereco;
     }
 
+    public String getNomeCurso() {
+
+        return this.nome + " é estudante do curso de " + this.curso;
+    }
+
     public void setEndereco(String novoEndereco) {
 
         this.endereco = novoEndereco;
+    }
+
+    //Teste
+    public static void main(String[] args){
+
+        Estudante estudante1 = new Estudante(1,"Pedro Henrique", "ADS",  "222.222.222-11", 555555555, "pedrohenri@gmail.com", "rua Soledad", 123, "Recife", "PE");
+
+    System.out.println(estudante1.getNome());
+    System.out.println(estudante1.getNomeCurso());
+
+    estudante1.setTel(98759878);
+
+
+
     }
 
 }

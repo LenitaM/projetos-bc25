@@ -42,5 +42,14 @@ public class Professor {
         }
     }
 
+    //Teste
+    public static void main(String[] args) {
+        Professor algebraProf = new Professor(3, "Augusto Marques", "augustoengufpe@gmail.com", 765439087, "Álgebra Linear", "Av. Prof. Moraes Rego", 1235, "Recife", "PE");
 
+
+        System.out.println(algebraProf.getNome());
+
+        algebraProf.setDisciplina("Trigonometria");
+
+    }
 }
